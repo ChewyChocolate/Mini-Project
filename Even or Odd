@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args){
+        Scanner myObj = new Scanner(System.in);
+
+        System.out.print("How many numbers do you want to enter?: ");
+        int loopNum = myObj.nextInt();
+
+       int[] array = new int[loopNum];
+       for(int i = 0; i < loopNum; i++){
+            System.out.print("Enter a Number: ");
+            array[i] = myObj.nextInt();
+       }
+       for(int i = 0; i < loopNum; i++){
+            if(array[i] % 2 == 0){
+                System.out.println(array[i] + " Even");
+            }
+            else{
+                System.out.println(array[i] + " Odd");
+            }
+
+       }
+       
+        myObj.close();
+    }
+}
